@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website - Rahul Hadpadh</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/646f731ac8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+                <nav>
+                    <img src="./images/Rahul.3.png" class="logo">
+                    <ul id="sidemenu">
+                        <li> <a href="#header"> Home</a></li>
+                        <li> <a href="#about"> About</a></li>
+                        <li> <a href="#"> servies</a></li>
+                        <li> <a href="#"> portfolio</a></li>
+                        <li> <a href="#contact"> contact us</a></li>
+                        <i class="fa fa-times" onclick="closemenu()" ></i>
+                    </ul>
+                    <i class="fa fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text" style="color: white;">
+                    <p>Full Stack web Devloper</p>
+                    <h1>Hi I'm <br><span>Rahul</span> Hadpadh  from Karnataka</h1>
+                </div>
+        </div>
+    </header>
+<!----------about----------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-text">
+                        About me
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore assumenda modi natus pariatur qui eligendi adipisci! Atque dolor minima aliquid nulla asperiores voluptate nesciunt autem a. Enim, qui autem!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('exeperince')">Exeperince</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Devloper</span><br>Designing full stack responsive websites</li>
+                        </ul>
+                    <div class="tab-contents" id="exeperince">
+                        <ul>
+                            <li><span>Fresher</span><br>Loking for Great Opprtunitiesa</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>Full Stack Web Devloper</li>
+                        </ul>
+                        <ul>
+                            <li><span>2011-2020</span><br>Completed 10th from Adrash vidyalaya (R.M.S.A)  Biballi</li>
+                        </ul>
+                        <ul>
+                            <li><span>2021-2022</span><br>Completed PU from YB Annigeri College Dharwad</li>
+                        </ul>
+                        <ul>
+                            <li><span>2023 ---</span><br>BE From SSIT Tumakuru</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+<!----------about----------------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> rahulhadpad@gmail.com</p>
+                    <p><i class="fa-solid fa-mobile"></i> 0000000000</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://intagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                     </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="your name" required>
+                        <input type="email" name="email"  placeholder="your email " required>
+                        <textarea name="Message<" rows="6" placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">--submit---</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="cpoyright">
+            <p>copyright @ Rahul. Made <i class="fa-brands fa-gratipay"></i> with lots of love</p>
+        </div>
+
+    </footer>
+
+    <script>
+
+       var tablinks = document.getElementsByClassName("tab-links");
+       var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove ("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+
+    <script>
+
+        var sidemenu= document.getElementById("sidemenu")
+
+        function openmenu()
+        {
+            sidemenu.style.right="0";
+        }
+        function closemenu()
+        {
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
